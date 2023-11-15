@@ -25,7 +25,7 @@ export default function Header() {
             <Nav.Link  >Frutas</Nav.Link>
             <Nav.Link >Verduras</Nav.Link>
             <NavDropdown title="Mi Perfil" id="navbarScrollingDropdown">
-              <NavDropdown.Item as ={Link} to="/login"  >Inicio de sesion</NavDropdown.Item>
+              <NavDropdown.Item >Inicio de sesion</NavDropdown.Item>
               <NavDropdown.Item >Registrate</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" disabled>Mi carrito de Compras</Nav.Link>

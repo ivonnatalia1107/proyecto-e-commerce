@@ -14,9 +14,6 @@ function App() {
         <Header />
         <Jumbotron />
         <Showroom />
-      <Routes>
-          <Route path='/login' element={<Login/>}/>
-        </Routes>
     </>
   )
 }
