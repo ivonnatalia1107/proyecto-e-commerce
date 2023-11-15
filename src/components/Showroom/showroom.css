@@ -1,0 +1,32 @@
+*{
+    margin-top: 2px;
+}
+
+.cardStyle{
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.showRoomDisplay{
+    display: flex;
+    flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+   
+}
+
+.cardImg{
+border: 1px black solid;
+border-radius: 5%;
+margin-top: 5px;
+}
+
+.showRoomCards{
+    text-align: center;
+}
+
+.cardDescription{
+    text-align: justify;
+    }

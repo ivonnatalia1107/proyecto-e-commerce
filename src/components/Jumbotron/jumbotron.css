@@ -1,0 +1,57 @@
+
+.img {
+width: 100%;
+}
+
+.text {
+
+    background-color: rgba(9, 10, 8, 0.904);
+    margin-bottom: 15%;
+    padding: 10%;
+    
+
+}
+
+.text h1 {
+    padding: 5%;
+
+}
+
+.text p{
+ text-align: justify;
+ font-weight: 400;
+ font-size: x-large;
+
+}
+
+.text h2{
+    text-align: center;
+}
+
+.text li{
+    list-style: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+@media screen and (max-width: 650px) {
+
+       .text {
+
+        padding: 2%;
+        margin-bottom: 1%;
+
+    }
+    .text p{
+ 
+        font-size: large;
+       
+       }
+       .text li{
+
+        font-size: large;
+    }
+
+}
+
