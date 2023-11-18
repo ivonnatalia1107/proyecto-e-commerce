@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./header.css";
 import { Link } from 'react-router-dom';
 
@@ -21,13 +18,8 @@ export default function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link >Inicio</Nav.Link>
-            <Nav.Link  >Frutas</Nav.Link>
-            <Nav.Link >Verduras</Nav.Link>
-            <NavDropdown title="Mi Perfil" id="navbarScrollingDropdown">
-              <NavDropdown.Item >Inicio de sesion</NavDropdown.Item>
-              <NavDropdown.Item >Registrate</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as ={Link} to="/" >Inicio</Nav.Link>
+            <Nav.Link as ={Link} to="/login">Inicio de sesion</Nav.Link>
             <Nav.Link href="#" disabled>Mi carrito de Compras</Nav.Link>
           </Nav>
         </Navbar.Collapse>

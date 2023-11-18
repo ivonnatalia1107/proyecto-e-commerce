@@ -25,8 +25,7 @@ export default function Showroom() {
       {
         products.map(product => (
 
-
-          <div className="d-flex justify-content-around">
+          <div  key={product._id} className="d-flex justify-content-around">
             <Card className='cardStyle' style={{ width: '18rem' }}>
               <Card.Img className="cardImg" variant="top"  src={product.img}/>
               <Card.Body className='showRoomCards'>
