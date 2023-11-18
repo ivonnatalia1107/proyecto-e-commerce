@@ -2,20 +2,25 @@
 import Header from './components/header/header';
 import Jumbotron from './components/jumbotron/jumbotron';
 import "./app.css";
-import { Login } from './routes/Login';
 import Showroom from './components/showroom/showroom';
 import { Route, Routes } from 'react-router-dom'
+import { Login } from "./routes/Login/Login";
+import { UserProvider } from "./context/UserContext";
+
 
 const App = () => (
 
   <>
+        <UserProvider>
     <Header />
     <Jumbotron />
-    <Showroom />
+
     <Routes>
       <Route path="/login" element={<Login />} />
-    </Routes>
+      <Route path="/showroom" element={<Showroom />} />
 
+    </Routes>
+    </UserProvider>
   </>
 );
 
