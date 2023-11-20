@@ -4,19 +4,22 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './showroom.css';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 export default function Showroom() {
 
   const [products, setProducts] = useState([])
 
   const getProducts = async () => {
-    const resp = await axios.get('http://localhost:3000/v1/product')
+    const resp = await axios.get('https://backend-w1wu.onrender.com/v1/product')
     console.log(resp.data)
     setProducts(resp.data.detail)
   }
   useEffect(() => {
     getProducts()
   }, [])
+
+
 
   return (
 
@@ -33,7 +36,7 @@ export default function Showroom() {
                 <Card.Text className='cardDescription'>{product.description} </Card.Text>
                 <Card.Text className='cardDescription'>{product.country} </Card.Text>
                 <Card.Text className='cardDescription'>{product.amount} </Card.Text>
-                <Button variant="info">Anadir al carrito</Button>
+                <Button  as ={Link} to={`/product/${product._id}`} variant="info">Detalles</Button>
               </Card.Body>
             </Card>
           </div>

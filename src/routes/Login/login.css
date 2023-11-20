@@ -1,6 +1,71 @@
+.loginBox {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    align-content:center;
+    background-color: rgba(238, 235, 175, 0.893);
+padding: 1%;
+}
+
+.form{
+    border: 5px black solid;
+    background-color: rgba(222, 222, 215, 0.628) ;
+    width: 50%;
+    border-radius: 1%;
+
+    
+}
+
+ .titleForm{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    align-content:center;
+
+}
+
+.inputBox{
+    padding: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content:center;
+
+}
+
+.inputComponents{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
 .labels {
+    display: flex;
     border: 1px black solid;
     font-size: larger;
     padding: 1%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs {
+    border: 1px black solid;
+    font-size: larger;
+    padding: 1%;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.pButton {
+    display: flex;
+    flex-direction: column;
 }
 

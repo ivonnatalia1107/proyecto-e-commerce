@@ -7,7 +7,7 @@ import './login.css'
 
 export const Login = () => {
   const [isMember, setIsMember] = useState(false);
-  const {token, setToken } = useContext(UserContext)
+  const { token, setToken } = useContext(UserContext)
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -27,32 +27,34 @@ export const Login = () => {
   };
 
   return (
-    <section>
+    <section className='loginBox'>
+      <section className='form'>
         <p>{token}</p>
-      <form onSubmit={onSubmit}>
-        <h3 className='titleForm'>{isMember ? "Ingresa" : "Registrate"}</h3>
-        {!isMember && (
-          <div>
-            <label className='labels' htmlFor="firstName">Name</label>
-            <input id="firstName" type="text" name="firstName"></input>
+        <form onSubmit={onSubmit}>
+          <h3 className='titleForm'>{isMember ? "Ingresa" : "Registrate"}</h3>
+          <div className='inputBox'>
+            {!isMember && (
+              <div className='inputComponents'>
+                <label className='labels' htmlFor="firstName">Name</label><input className='inputs' id="firstName" type="text" name="firstName"></input>
+              </div>
+            )}
+            <div className='inputComponents'>
+              <label className='labels' htmlFor="mail">Email</label><input className='inputs' id="mail" type="text" name="mail"></input>
+            </div>
+            <div className='inputComponents'>
+              <label className='labels' htmlFor="password">Contraseña</label><input className='inputs' id="password" type="password" name="password"></input>
+            </div>
+            <div className='buttons'>
+              <button type="submit">Enviar</button>
+              <p className='pButton'>{isMember ? "Aun no estas registrado?" : "Ya estas registrado?"}
+                <button type="button" onClick={() => setIsMember(!isMember)}>
+                  {isMember ? "Registro" : "Ingreso"}
+                </button>
+              </p>
+            </div>
           </div>
-        )}
-        <div>
-          <label  className='labels' htmlFor="mail">Email</label>
-          <input id="mail" type="text" name="mail"></input>
-        </div>
-        <div>
-          <label className='labels' htmlFor="password">Password</label>
-          <input id="password" type="password" name="password"></input>
-        </div>
-        <button  type="submit">Submit</button>
-        <p>
-          {isMember ? "Not a member yet?" : "Already a member?"}
-          <button type="button" onClick={() => setIsMember(!isMember)}>
-            {isMember ? "Register" : "Login"}
-          </button>
-        </p>
-      </form>
+        </form>
+      </section>
     </section>
   );
 };
