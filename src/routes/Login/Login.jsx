@@ -3,12 +3,14 @@ import { useContext, useState } from "react";
 import { loginService, signupService } from "../../services/user";
 import { UserContext } from "../../context/UserContext";
 import './login.css'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export const Login = () => {
   const navigate = useNavigate();
   const [isMember, setIsMember] = useState(false);
-  const { token, setToken } = useContext(UserContext)
+  const { token, setToken, name, mail, setName, setMail } = useContext(UserContext);
+ 
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -17,15 +19,28 @@ export const Login = () => {
     const dataObject = Object.fromEntries(formData);
 
     if (isMember) {
+      try {
       const userData = await loginService(dataObject);
       console.log(userData)
-      setToken(userData.detail.token)
-      navigate('/miperfil');
+      setToken(userData.detail.token);
+      setName(userData.detail.user.name);
+      setMail(userData.detail.user.mail)
+      navigate('/miperfil')
+    }  catch (error) {
+      alert('Usuario o clave invalida. Revisa tu clave o registrate.');
+      return {
+        message: 'Usuario o clave invalida',
+      };
+    }
 
     } else {
       const userData = await signupService(dataObject);
       console.log(userData);
-      setToken(userData.detail.token)
+      alert('Felicidades! ya eres parte de la comunidad frutera, ahora porfavor ingresa a tu perfil');
+      setToken(userData.detail.token);
+      setName(userData.detail.user.name);
+      setMail(userData.detail.user.mail);
+
     }
   };
 
@@ -37,7 +52,7 @@ export const Login = () => {
           <div className='inputBox'>
             {!isMember && (
               <div className='inputComponents'>
-                <label className='labels' htmlFor="firstName">Name</label><input className='inputs' id="firstName" type="text" name="name"></input>
+                <label className='labels' htmlFor="firstName">Nombre</label><input className='inputs' id="name" type="text" name="name"></input>
               </div>
             )}
             <div className='inputComponents'>
@@ -47,7 +62,7 @@ export const Login = () => {
               <label className='labels' htmlFor="password">Contraseña</label><input className='inputs' id="password" type="password" name="password"></input>
             </div>
             <div className='buttons'>
-              <button type="submit">Enviar</button>
+              <button type="submit" >Enviar </button>
               <p className='pButton'>{isMember ? "Aun no estas registrado?" : "Ya estas registrado?"}
                 <button type="button" onClick={() => setIsMember(!isMember)}>
                   {isMember ? "Registro" : "Ingreso"}

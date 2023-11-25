@@ -10,7 +10,9 @@ export default function Header() {
 
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='navBarContainer' fluid>
+        <Link to="/showroom">
         <img className="logo" src="https://res.cloudinary.com/duybxe2k2/image/upload/v1696184559/Proyecto%205%20UDD%20Verduleria%20e-commerce/logo_m7vor7.png"/>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse className='navBarCollapseItems' id="navbarScroll">
           <Nav
