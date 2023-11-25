@@ -35,7 +35,7 @@ export const Login = () => {
           <div className='inputBox'>
             {!isMember && (
               <div className='inputComponents'>
-                <label className='labels' htmlFor="firstName">Name</label><input className='inputs' id="firstName" type="text" name="firstName"></input>
+                <label className='labels' htmlFor="firstName">Name</label><input className='inputs' id="firstName" type="text" name="name"></input>
               </div>
             )}
             <div className='inputComponents'>

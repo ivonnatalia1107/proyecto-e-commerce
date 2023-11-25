@@ -11,7 +11,7 @@ export default function Showroom() {
   const [products, setProducts] = useState([])
 
   const getProducts = async () => {
-    const resp = await axios.get('https://backend-w1wu.onrender.com/v1/product')
+    const resp = await axios.get('https://backend1-xdtg.onrender.com/v1/product')
     console.log(resp.data)
     setProducts(resp.data.detail)
   }
