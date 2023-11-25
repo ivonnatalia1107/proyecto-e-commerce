@@ -3,9 +3,10 @@ import { useContext, useState } from "react";
 import { loginService, signupService } from "../../services/user";
 import { UserContext } from "../../context/UserContext";
 import './login.css'
-
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [isMember, setIsMember] = useState(false);
   const { token, setToken } = useContext(UserContext)
 
@@ -19,6 +20,8 @@ export const Login = () => {
       const userData = await loginService(dataObject);
       console.log(userData)
       setToken(userData.detail.token)
+      navigate('/miperfil');
+
     } else {
       const userData = await signupService(dataObject);
       console.log(userData);
@@ -29,7 +32,6 @@ export const Login = () => {
   return (
     <section className='loginBox'>
       <section className='form'>
-        <p>{token}</p>
         <form onSubmit={onSubmit}>
           <h3 className='titleForm'>{isMember ? "Ingresa" : "Registrate"}</h3>
           <div className='inputBox'>

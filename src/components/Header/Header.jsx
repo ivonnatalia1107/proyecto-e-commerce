@@ -20,7 +20,8 @@ export default function Header() {
           >
             <Nav.Link as ={Link} to="/showroom">Productos</Nav.Link>
             <Nav.Link as ={Link} to="/login">Inicio de sesion</Nav.Link>
-            <Nav.Link href="#" disabled>Mi carrito de Compras</Nav.Link>
+            <Nav.Link as ={Link} to="/miperfil">Mi perfil</Nav.Link>
+            <Nav.Link as ={Link} to="/carrito">Mi carrito de Compras</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
