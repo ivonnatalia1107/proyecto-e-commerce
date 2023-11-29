@@ -14,11 +14,10 @@ const App = () => (
   <>
     <UserProvider>
       <Header />
-      <Jumbotron />
 
       <Routes>
 
-        <Route path="/home" />
+        <Route path="/home" element={<Jumbotron />} />
         <Route path="/login" element={<Login />} />
         <Route path="/showroom" element={<Showroom />} />
         <Route path="/product/:id" element={<ProductDetail />} />
