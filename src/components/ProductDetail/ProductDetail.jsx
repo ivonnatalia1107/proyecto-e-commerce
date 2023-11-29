@@ -10,12 +10,10 @@ export const ProductDetail = () => {
     useEffect(() => {
         const getProducts = async () => {
             try {
-                const resp = await axios.get('https://backend-w1wu.onrender.com/v1/product');
+                const resp = await axios.get('https://backend1-xdtg.onrender.com/v1/product');
                 const productData = resp.data.detail;
-
-
                 const selectedProduct = productData.find(product => product._id === id);
-
+                console.log(selectedProduct.name)
                 setProduct(selectedProduct);
             } catch (error) {
                 console.error(error);
@@ -24,6 +22,14 @@ export const ProductDetail = () => {
 
         getProducts();
     }, [id]);
+
+const checkout = async (product) => {
+    const response = await axios.post("https://backend1-xdtg.onrender.com/v1/checkout", product)
+
+    window.open(response.data, '_blank');
+
+};
+
 
     return (
         <>
@@ -37,6 +43,8 @@ export const ProductDetail = () => {
                         <p>{product.description}</p>
                         <p>{product.country}</p>
                         <p>{product.amount}</p>
+                        <p>${product.price} CLP</p>
+                        <button onClick={() => checkout(product)} >Comprar</button>
                         </div>
                     </div>
                 )}
