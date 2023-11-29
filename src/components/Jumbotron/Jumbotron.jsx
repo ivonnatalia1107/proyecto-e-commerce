@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import "./jumbotron.css"
+import { Link } from 'react-router-dom';
 
 
 export default function Jumbotron() {
@@ -17,6 +18,8 @@ export default function Jumbotron() {
             <h1>Sobre nosotros</h1>
             <p>Somos una tienda de delivery de frutas y verduras que funciona desde el 2020 como respuesta a las nuevas necesidades del mercado.</p>
             <p>Si no tienes tiempo para ir a comprar, tranquil@! Nosotros llevamos los mejores productos hasta tu hogar. </p>
+            <p>Ingresa o Registrate para comenzar tu compra</p>
+            <Link to={"/login"}>Ingresa/Registrate</Link>
           </Carousel.Caption>
 
         </Carousel.Item >
