@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Login } from "./routes/Login/Login";
 import { UserProvider } from "./context/UserContext";
 import { ProductDetail } from './components/ProductDetail/ProductDetail';
-import MiPerfil from './routes/Login/MiPerfil';
+import MiPerfil from './routes/MiPerfil/MiPerfil';
 
 const App = () => (
 

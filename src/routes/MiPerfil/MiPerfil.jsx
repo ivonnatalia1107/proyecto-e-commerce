@@ -3,7 +3,7 @@ import {UserContext} from "../../context/UserContext";
 import { useContext } from 'react';
 import './miPerfil.css'
 import { Link } from 'react-router-dom';
-import Showroom from '../../components/showroom/showroom';
+
 
 export default function MiPerfil() {
   const {  token, name, mail } = useContext(UserContext);
