@@ -13,7 +13,7 @@ export const SpinnerFunction = () => {
             role="status"
             aria-hidden="true"
           />
-          <span className="visually-hidden">Loading...</span>
+          <span className="visually-hidden">Cargando...</span>
         </Button>{' '}
         <Button variant="success" disabled>
           <Spinner
@@ -23,7 +23,7 @@ export const SpinnerFunction = () => {
             role="status"
             aria-hidden="true"
           />
-          Loading...
+          Cargando ...
         </Button>
       </>
       );

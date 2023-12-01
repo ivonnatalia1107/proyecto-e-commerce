@@ -21,7 +21,7 @@ export default function Header() {
             navbarScroll
           >
             <Nav.Link as ={Link} to="/showroom">Productos</Nav.Link>
-            <Nav.Link as ={Link} to="/login">Inicio de sesion</Nav.Link>
+            <Nav.Link as ={Link} to="/login">Inicio de sesion / Registro</Nav.Link>
             <Nav.Link as ={Link} to="/miperfil">Mi perfil</Nav.Link>
           </Nav>
         </Navbar.Collapse>
