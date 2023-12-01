@@ -5,20 +5,24 @@
     align-content: center;
     justify-content: center;
     padding: 2%;
-    background-color: rgba(127, 255, 212, 0.662);
+    background-color: rgba(50, 155, 121, 0.662);
 }
 
 .detailCard {
 
     display: flex;
     flex-direction: column;
-    border: 3px black solid;
+    border: 2px black solid;
     border-radius: 2%;
     align-items: center;
-    width: 30%;
+    width: auto;
     padding: 1%;
-    background-color: rgb(185, 214, 239);
+    background-color: rgb(213, 219, 224);
 
+}
+
+.checkButton:hover{
+ background-color: rgb(7, 110, 33);
 }
 
 .title {
@@ -30,7 +34,7 @@
 
 .imgDetail {
     width: 300px;
-    border: 3px black solid;
+    border: 2px black solid;
     border-radius: 2%;
     display: flex;
     flex-direction: column;

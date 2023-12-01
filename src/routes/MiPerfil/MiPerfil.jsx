@@ -15,8 +15,9 @@ export default function MiPerfil() {
     <p className='textProfile'> Hola! <b>{name}</b>, cualquier información de tu pedido llegará al siguiente correo electrónico: <b>{mail}</b></p>
     <p>Nota: Para hacer mas rapida la devolucion de tu dinero en caso de problemas con el estock o que no te agrade el producto que recibiste cada producto se cancela por separado.</p>
     </div>
+    <Link className='myPageLink' to={"/Showroom"}> Seguir comprando </Link>
     </section>
-  <Link to={"/Showroom"}> Seguir comprando </Link>
+
     </>
   )
 }

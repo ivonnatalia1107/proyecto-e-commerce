@@ -44,7 +44,7 @@ const checkout = async (product) => {
                         <p>{product.country}</p>
                         <p>{product.amount}</p>
                         <p>${product.price} CLP</p>
-                        <button onClick={() => checkout(product)} >Comprar</button>
+                        <button className='checkButton' onClick={() => checkout(product)} >Comprar</button>
                         </div>
                     </div>
                 )}
