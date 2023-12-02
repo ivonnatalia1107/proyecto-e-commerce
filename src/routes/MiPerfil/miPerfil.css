@@ -13,7 +13,7 @@
 .cardProfile{
     border: 5px black solid;
     background-color: rgba(222, 222, 215, 0.628) ;
-    width: 50%;
+    width: auto;
     border-radius: 1%;
     padding: 2%;
 
@@ -41,8 +41,8 @@
 
     background-color: rgba(222, 222, 215, 0.628) ;
     border: 5px black solid;
-    padding: 3%;
-    width: 50%;
+    padding: 5%;
+    width: auto;
     text-decoration: none;
     font-size: large;
     color: black;
