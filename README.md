@@ -1,4 +1,4 @@
-# Proyecto E-commerce
+# Proyecto E-commerce - Front
 
 Este proyecto es un sitio web de comercio electrónico desarrollado con React JS y Vite. Utiliza diversas tecnologías y bibliotecas, incluyendo Bootstrap, dotenv, cors, Axios y React Router DOM.
 
